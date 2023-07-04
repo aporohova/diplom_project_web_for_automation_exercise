@@ -26,7 +26,7 @@ public class LoginPage {
     loginResultCheck = $(".login-form");
 
     public LoginPage openPage() {
-        open("https://www.automationexercise.com/");
+        open("/");
 
         return this;
     }

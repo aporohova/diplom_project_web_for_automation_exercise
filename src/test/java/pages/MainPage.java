@@ -1,18 +1,23 @@
 package pages;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import com.codeborne.selenide.*;
+import org.openqa.selenium.By;
+import java.util.List;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
-    SelenideElement menu = $("div.shop-menu"),
+    ElementsCollection menu = $$(By.xpath("//ul[@class='nav navbar-nav']/li//*"));
+    SelenideElement
     email = $("#susbscribe_email"),
     notification = $(".alert-success"),
     categoryVideo = $(".fa-youtube-play");
 
     public MainPage openPage() {
-        open("https://www.automationexercise.com/");
+        open("/");
+
+        return this;
+    }
+    public MainPage checkMenu(List value){
+        menu.shouldHave(CollectionCondition.containExactTextsCaseSensitive(value));
 
         return this;
     }

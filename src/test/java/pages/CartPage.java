@@ -17,7 +17,7 @@ public class CartPage {
     checkQuantity = $(".disabled");
 
     public CartPage openPage() {
-        open("https://www.automationexercise.com/");
+        open("/");
 
         return this;
     }
