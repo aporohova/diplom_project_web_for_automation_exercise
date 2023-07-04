@@ -11,7 +11,7 @@ public class WebDriverProvider  {
     public static void configure() {
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowserName();
-        Configuration.browser = config.getBrowserVersion();
+        Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
         if(config.isRemote()){

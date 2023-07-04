@@ -44,8 +44,6 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
-}
-tasks.withType(Test) {
     systemProperties(System.getProperties())
 }
 task smoke(type: Test) {
