@@ -1,9 +1,9 @@
 {
   "base": {
     "logo": "",
-    "project": "Automation Course: Diploma Project for WEB and API",
+    "project": "Automation Course: Diploma Project for UI Tests",
     "environment": "test_environment",
-    "comment": "notification for Litres tests",
+    "comment": "notification for Automation Exercise UI Tests",
     "reportLink": "https://jenkins.autotests.cloud/",
     "language": "ru",
     "allureFolder": "allure-report/",
