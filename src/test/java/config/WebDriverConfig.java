@@ -2,8 +2,8 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/local.properties",
-        "classpath:config/remote.properties"
+        "classpath:config/${env}.properties",
+        //"classpath:config/remote.properties"
 })
 public interface WebDriverConfig extends Config {
     @Key("browserName")
