@@ -38,14 +38,35 @@ dependencies {
             "org.aeonbits.owner:owner:1.0.12")
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
 }
-tasks.withType(JavaCompile) {
+//tasks.withType(JavaCompile).configureEach() {
+//    options.encoding = 'UTF-8'
+//}
+compileJava {
     options.encoding = 'UTF-8'
 }
-
-test {
-    useJUnitPlatform()
-    systemProperties(System.getProperties())
+compileTestJava {
+    options.encoding = 'UTF-8'
 }
+//test {
+//    useJUnitPlatform()
+//    systemProperties(System.getProperties())
+//}
+//task smoke(type: Test) {
+//    useJUnitPlatform {
+//        includeTags("smoke")
+//    }
+//}
+tasks.withType(Test).configureEach {
+    systemProperties(System.getProperties())
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
 task smoke(type: Test) {
     useJUnitPlatform {
         includeTags("smoke")
