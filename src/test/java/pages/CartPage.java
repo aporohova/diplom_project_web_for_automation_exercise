@@ -3,9 +3,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-
 public class CartPage {
-
     SelenideElement addToCartButton = $(".fa-shopping-cart",1),
     openCart = $(byText("View Cart")),
     checkCart = $(".cart_description"),

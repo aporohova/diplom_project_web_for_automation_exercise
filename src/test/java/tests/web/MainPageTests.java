@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.stream.Stream;
 import static io.qameta.allure.Allure.step;
 import static utils.TestData.userEmail;
-
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     static Stream<Arguments> mainMenuTest() {
@@ -19,8 +18,7 @@ public class MainPageTests extends TestBase {
                 Arguments.of(List.of("Home", "\uE8F8 Products", "Cart", "Signup / Login", "Test Cases", "API Testing", "Video Tutorials", "Contact us")));
     }
 
-    @Tag("smoke")
-    @Tag("Menu")
+    @Tag("smoke") @Tag("web")
     @DisplayName("Проверка отображения меню главной страницы")
     @MethodSource
     @ParameterizedTest(name = "header меню")
@@ -34,8 +32,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke")
-    @Tag("Subscribe")
+    @Tag("smoke") @Tag("web")
     @DisplayName("Оформление подписки")
     void verifySubscription() {
         step("Открыть главную страницу", () -> {

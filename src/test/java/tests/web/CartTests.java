@@ -4,13 +4,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import tests.TestBase;
-
 import static io.qameta.allure.Allure.step;
-
 public class CartTests extends TestBase {
     CartPage cartPage = new CartPage();
     @Test
-    @Tag("smoke") @Tag("Cart")
+    @Tag("smoke") @Tag("web")
     @DisplayName("Добавление товара в корзину и его удаление")
     void addDeleteCartTest() {
         step("Открыть главную страницу", () -> {
@@ -34,8 +32,7 @@ public class CartTests extends TestBase {
 
     }
     @Test
-    @Tag("smoke")
-    @Tag("Cart")
+    @Tag("smoke") @Tag("web")
     @DisplayName("Проверка количества добавленных в корзину товаров")
     void cartQuantityTest() {
         step("Открыть главную страницу", () -> {

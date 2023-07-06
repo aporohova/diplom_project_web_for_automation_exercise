@@ -3,7 +3,6 @@ import com.codeborne.selenide.*;
 import org.openqa.selenium.By;
 import java.util.List;
 import static com.codeborne.selenide.Selenide.*;
-
 public class MainPage {
     ElementsCollection menu = $$(By.xpath("//ul[@class='nav navbar-nav']/li//*"));
     SelenideElement

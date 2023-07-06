@@ -4,14 +4,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 import tests.TestBase;
-
 import static io.qameta.allure.Allure.step;
 import static utils.TestData.*;
-
 public class LoginTests extends TestBase {
     LoginPage loginPage = new LoginPage();
     @Test
-    @Tag("smoke") @Tag("Login")
+    @Tag("smoke") @Tag("web")
     @DisplayName("Успешная регистрация пользователя")
     void successfulRegistration() {
         step("Открыть главную страницу", () -> {
@@ -62,8 +60,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke")
-    @Tag("Login")
+    @Tag("smoke") @Tag("web")
     @DisplayName("Логин с несуществующими данными")
     void invalidLogin() {
         step("Открыть главную страницу", () -> {
@@ -76,7 +73,7 @@ public class LoginTests extends TestBase {
             loginPage.enterLoginEmail(userEmail);
         });
         step("Ввести пароль для логина", () -> {
-            loginPage.enterLoginPassword(userPassword);
+            loginPage.enterLoginPassword("123");
         });
         step("Проверить отображение ошибки", () -> {
             loginPage.checkLoginResult("Your email or password is incorrect!");
