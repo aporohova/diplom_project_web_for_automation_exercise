@@ -6,7 +6,6 @@ import config.WebDriverProvider;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -29,12 +28,6 @@ public class TestBase {
         capabilities.setCapability("selenoid:options", prop);
 
         Configuration.browserCapabilities = capabilities;
-
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true));
-//        Configuration.browserCapabilities = capabilities;
     }
         @BeforeEach
         void addAllure () {
