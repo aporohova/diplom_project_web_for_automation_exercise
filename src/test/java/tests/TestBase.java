@@ -10,6 +10,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.util.HashMap;
 import java.util.Map;
 public class TestBase {
     @BeforeAll
@@ -20,10 +22,19 @@ public class TestBase {
         Configuration.timeout = 15000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true));
+        Map<String, Object> prop = new HashMap<>();
+        prop.put("enableVNC", true);
+        prop.put("enableVideo", true);
+
+        capabilities.setCapability("selenoid:options", prop);
+
         Configuration.browserCapabilities = capabilities;
+
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+//                "enableVNC", true,
+//                "enableVideo", true));
+//        Configuration.browserCapabilities = capabilities;
     }
         @BeforeEach
         void addAllure () {
