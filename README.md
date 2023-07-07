@@ -44,11 +44,11 @@ ___
 
 ___
 
-## <img alt="Jenkins" height="25" src="images/logo/jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Project_For_Litres/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/diploma_project_web/)</a>
 
 ___
 <p align="center">
-!!!! ДОБАВИТЬ СКРИН И ССЫЛКУ ДЖЕНКИНС<a href="https://jenkins.autotests.cloud/job/Project_For_Litres/"><img src="images/screenshots/jenkins_dashboard.png" alt="Jenkins" width="950"/></a>
+<a href="https://jenkins.autotests.cloud/job/diploma_project_web/"><img src="images/screenshots/jenkins_dashboard.png" alt="Jenkins" width="950"/></a>
 
 
 ## **Параметры сборки в Jenkins:**
@@ -56,14 +56,14 @@ ___
 ***Удалённый запуск через Jenkins:***
 ```bash  
 clean
-smoke
+test
 -Dbase_url="${SITE_BASE_URL}"
 -Dbrowser="${BROWSER}"
 -Dbrowser_size="${BROWSER_SIZE}"
 -DremoteUrl=${REMOTE_URL}"
 ```
 ___
-!!! ПОМЕНЯТЬ ССЫЛКУ АЛЮР## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project_For_Litres/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/diploma_project_web/33/allure/)</a>
 
 ___
 
@@ -76,7 +76,7 @@ ___
 ### *Тест-кейсы*
 
 <p align="center">  
-<img title="Allure Tests" src="images/screenshots/allure_suites.png" width="850">  
+<img title="Allure Tests" src="images/screenshots/allure_suits.png" width="850">  
 </p>
 
 ### *Графики*
@@ -89,7 +89,7 @@ ___
 
 ___
 
-!!ПОМЕНЯТЬ ССЫЛКУ## <img alt="Allure" height="25" src="images/logo/allure2.svg" width="35"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2427/dashboards">Allure TestOps</a>
+## <img alt="Allure" height="25" src="images/logo/allure2.svg" width="35"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3462/dashboards">Allure TestOps</a>
 ___
 
 ### *Allure TestOps Dashboard*
@@ -114,7 +114,7 @@ ___
 
 ___
 
-## <img alt="Allure" height="25" src="images/logo/jira.svg" width="45"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-717">Jira</a>
+## <img alt="Allure" height="25" src="images/logo/jira.svg" width="45"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-778">Jira</a>
 ____
 <p align="center">  
 <img title="Jira" src="images/screenshots/jira.png" width="">  
@@ -125,7 +125,7 @@ ____
 ## <img alt="Allure" height="25" src="images/logo/telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screenshots/telegram_bot.png" width="550">  
+<img title="Allure Overview Dashboard" src="images/screenshots/telegram.png" width="550">  
 </p>
 
 ____

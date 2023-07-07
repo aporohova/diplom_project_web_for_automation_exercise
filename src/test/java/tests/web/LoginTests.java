@@ -1,5 +1,4 @@
 package tests.web;
-import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -81,6 +80,5 @@ public class LoginTests extends TestBase {
         step("Проверить отображение ошибки", () -> {
             loginPage.checkLoginResult("Your email or password is incorrect!");
         });
-
 }
     }

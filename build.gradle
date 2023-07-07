@@ -44,34 +44,6 @@ tasks.withType(JavaCompile) {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
 }
-//tasks.withType(JavaCompile).configureEach() {
-//    options.encoding = 'UTF-8'
-//}
-//compileJava {
-//    options.encoding = 'UTF-8'
-//}
-//compileTestJava {
-//    options.encoding = 'UTF-8'
-//}
-//test {
-//    useJUnitPlatform()
-//    systemProperties(System.getProperties())
-//}
-//task smoke(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("smoke")
-//    }
-//}
-//tasks.withType(Test).configureEach {
-//    systemProperties(System.getProperties())
-//
-//    testLogging {
-//        lifecycle {
-//            events "started", "skipped", "failed", "standard_error", "standard_out"
-//            exceptionFormat "short"
-//        }
-//    }
-//}
 
 test {
     useJUnitPlatform()
