@@ -12,34 +12,22 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 public class TestBase {
     @BeforeAll
-    static void configure() {
+    static void setup() {
         WebDriverProvider.config();
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.pageLoadTimeout = 100000;
+        Configuration.timeout = 15000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true));
         Configuration.browserCapabilities = capabilities;
     }
-
-
-//    @BeforeAll
-//    static void setup() {
-//        WebDriverProvider.config();
-//        Configuration.pageLoadStrategy = "eager";
-//        Configuration.pageLoadTimeout = 100000;
-//        Configuration.timeout = 15000;
-//
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true));
-//        Configuration.browserCapabilities = capabilities;
-//    }
-//        @BeforeEach
-//        void addAllure () {
-//            SelenideLogger.addListener("allure", new AllureSelenide());
-//        }
+        @BeforeEach
+        void addAllure () {
+            SelenideLogger.addListener("allure", new AllureSelenide());
+        }
 
         @AfterEach
         void addAttachments () {
