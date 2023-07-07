@@ -8,7 +8,14 @@ public class WebDriverProvider {
         Configuration.browser = config.getBrowserName().toLowerCase();
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.remote = config.getRemoteUrl();
         Configuration.browserSize = config.getBrowserSize();
+
+        String remoteUrl = config.getRemoteUrl();
+        if (remoteUrl != null) {
+            Configuration.remote = remoteUrl;
+        }
+
+        //Configuration.remote = config.getRemoteUrl();
+
     }
 }

@@ -1,14 +1,17 @@
 package tests.web;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import tests.TestBase;
 import static io.qameta.allure.Allure.step;
+
+@Owner("Алена Порохова")
+@Tag("web")
 public class CartTests extends TestBase {
     CartPage cartPage = new CartPage();
     @Test
-    @Tag("smoke") @Tag("web")
     @DisplayName("Добавление товара в корзину и его удаление")
     void addDeleteCartTest() {
         step("Открыть главную страницу", () -> {
@@ -32,7 +35,6 @@ public class CartTests extends TestBase {
 
     }
     @Test
-    @Tag("smoke") @Tag("web")
     @DisplayName("Проверка количества добавленных в корзину товаров")
     void cartQuantityTest() {
         step("Открыть главную страницу", () -> {

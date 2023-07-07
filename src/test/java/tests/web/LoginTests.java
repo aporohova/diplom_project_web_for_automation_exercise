@@ -1,4 +1,6 @@
 package tests.web;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -6,10 +8,12 @@ import pages.LoginPage;
 import tests.TestBase;
 import static io.qameta.allure.Allure.step;
 import static utils.TestData.*;
+
+@Owner("Алена Порохова")
+@Tag("web")
 public class LoginTests extends TestBase {
     LoginPage loginPage = new LoginPage();
     @Test
-    @Tag("smoke") @Tag("web")
     @DisplayName("Успешная регистрация пользователя")
     void successfulRegistration() {
         step("Открыть главную страницу", () -> {
@@ -60,7 +64,6 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke") @Tag("web")
     @DisplayName("Логин с несуществующими данными")
     void invalidLogin() {
         step("Открыть главную страницу", () -> {
