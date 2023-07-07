@@ -4,7 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 public class CartPage {
-    SelenideElement addToCartButton = $(".fa-shopping-cart",1),
+    SelenideElement addToCartButton = $("[data-product-id=2]"),
+    //$(".fa-shopping-cart",1),
     openCart = $(byText("View Cart")),
     checkCart = $(".cart_description"),
     deleteItem = $(".cart_quantity_delete"),
