@@ -21,7 +21,4 @@ public interface WebDriverConfig extends Config {
     @Key("remoteUrl")
     String getRemoteUrl();
 
-    @Key("isRemote")
-    @DefaultValue("false")
-    Boolean isRemote();
 }
