@@ -15,6 +15,7 @@ import static utils.TestData.userEmail;
 
 @Owner("Алена Порохова")
 @Tag("web")
+@DisplayName("Тестирование главной страницы сайта")
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
     static Stream<Arguments> mainMenuTest() {
@@ -35,7 +36,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Оформление подписки")
+    @DisplayName("Проверка оформления подписки")
     void verifySubscription() {
         step("Открыть главную страницу", () -> {
             mainPage.openPage();

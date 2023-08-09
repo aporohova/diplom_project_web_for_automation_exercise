@@ -8,3 +8,5 @@
 /gradle
 /gradlew
 /gradlew.bat
+/src/test/resources/config/remote.properties
+/notifications/config.json

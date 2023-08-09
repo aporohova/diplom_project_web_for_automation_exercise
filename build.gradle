@@ -27,7 +27,7 @@ allure {
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.13.1",
+            "com.codeborne:selenide-testng:6.13.1",
             "org.junit.jupiter:junit-jupiter:5.9.3",
             "com.github.javafaker:javafaker:1.0.2",
             "org.slf4j:slf4j-simple:2.0.5",
@@ -37,12 +37,6 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:2.21.0",
             "org.aeonbits.owner:owner:1.0.12")
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 test {

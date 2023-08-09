@@ -10,10 +10,12 @@ import static utils.TestData.*;
 
 @Owner("Алена Порохова")
 @Tag("web")
+@DisplayName("Тестирование логина на сайте")
 public class LoginTests extends TestBase {
     LoginPage loginPage = new LoginPage();
+
     @Test
-    @DisplayName("Успешная регистрация пользователя")
+    @DisplayName("Проверка спешной регистрации пользователя")
     void successfulRegistration() {
         step("Открыть главную страницу", () -> {
             loginPage.openPage();
@@ -63,7 +65,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Логин с несуществующими данными")
+    @DisplayName("Проверка логина с несуществующими данными")
     void invalidLogin() {
         step("Открыть главную страницу", () -> {
             loginPage.openPage();

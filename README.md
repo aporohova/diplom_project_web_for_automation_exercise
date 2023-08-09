@@ -34,12 +34,12 @@ ____
 ___
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 ___
-* ✓ *Успешная регистрация пользователя*
-* ✓ *Логин с несуществующими данными*
+* ✓ *Проверка успешной регистрации пользователя*
+* ✓ *Проверка логина с несуществующими данными*
 * ✓ *Проверка отображения меню главной страницы*
-* ✓ *Оформление подписки*
+* ✓ *Проверка оформления подписки*
 * ✓ *Проверка редиректа с главной страницы на youtube*
-* ✓ *Добавление товара в корзину и его удаление*
+* ✓ *Проверка добавления товара в корзину*
 * ✓ *Проверка количества добавленных в корзину товаров*
 
 ___
@@ -61,6 +61,16 @@ test
 -Dbrowser="${BROWSER}"
 -Dbrowser_size="${BROWSER_SIZE}"
 -DremoteUrl=${REMOTE_URL}"
+```
+***Для локального запуска:***
+```bash  
+✓  Создать файл remote.properties и разместить по адресу src/test/resources/config/remote.properties
+✓  Файл должен содержать следующие данные: 
+-browserName=CHROME
+-browserVersion=100
+-browserSize=1920x1080
+-baseUrl=https://www.automationexercise.com
+-remoteUrl=example: https://userLogin:UserPassword@selenoid.autotests.cloud/wd/hub
 ```
 ___
 ## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/diploma_project_web/33/allure/)</a>

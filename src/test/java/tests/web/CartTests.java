@@ -9,10 +9,12 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Алена Порохова")
 @Tag("web")
+@DisplayName("Тестирование функциональности корзины на сайте")
 public class CartTests extends TestBase {
     CartPage cartPage = new CartPage();
+
     @Test
-    @DisplayName("Добавление товара в корзину и его удаление")
+    @DisplayName("Проверка добавление товара в корзину")
     void addDeleteCartTest() {
         step("Открыть главную страницу", () -> {
             cartPage.openPage();
@@ -32,8 +34,8 @@ public class CartTests extends TestBase {
         step("Проверить, что корзина пуста", () -> {
             cartPage.checkCartIsEmpty("Cart is empty!");
         });
-
     }
+
     @Test
     @DisplayName("Проверка количества добавленных в корзину товаров")
     void cartQuantityTest() {

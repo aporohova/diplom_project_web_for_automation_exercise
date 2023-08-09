@@ -9,9 +9,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import java.util.HashMap;
 import java.util.Map;
+
 public class TestBase {
     @BeforeAll
     static void setup() {
@@ -29,18 +29,19 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
     }
-        @BeforeEach
-        void addAllure () {
-            SelenideLogger.addListener("allure", new AllureSelenide());
-        }
 
-        @AfterAll //change to AfterEach
-         static void addAttachments () {
-            Attach.screenshotAs("Last screenshot");
-            Attach.pageSource();
-            Attach.browserConsoleLogs();
-            Attach.addVideo();
-            Selenide.closeWebDriver();
-        }
+    @BeforeEach
+    void addAllure() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
+
+    @AfterAll
+    static void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+        Selenide.closeWebDriver();
+    }
+}
 
