@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CartPage {
-    SelenideElement addToCartButton = $(".fa-shopping-cart", 1),
+    private SelenideElement addToCartButton = $(".fa-shopping-cart", 1),
             openCart = $(byText("View Cart")),
             checkCart = $(".cart_description"),
             deleteItem = $(".cart_quantity_delete"),
