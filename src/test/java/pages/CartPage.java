@@ -19,20 +19,17 @@ public class CartPage {
 
     public CartPage openPage() {
         open("/");
-
         return this;
     }
 
     public CartPage addToCart() {
         addToCartButton.hover().click();
-        sleep(4000);
 
         return this;
     }
 
     public CartPage openCart() {
         openCart.click();
-        sleep(6000);
         return this;
     }
 
